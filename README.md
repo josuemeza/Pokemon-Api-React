@@ -22,13 +22,13 @@ The app shows you:
 
 - Remove unused react testing library and replace it by jest.
 - Add a unique loader state and present all data when ready.
-- Add a filter element type.
-- Implement the new [Pokemon Client provided](https://github.com/PokeAPI/pokeapi-js-wrapper).
+- Add a filter by element type.
+- Implement the new [Pokemon Client](https://github.com/PokeAPI/pokeapi-js-wrapper).
 - Add Pokemon description in single modal.
 
 # Challenges
 
 - Use TDD to implement the new behaviors.
 - Code refactor to maintain layer independence.
-- Use dependency injection to implement the client.
+- Use dependency injection to implement the new client.
 - Grow up the coverage to the higher!
