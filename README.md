@@ -20,7 +20,6 @@ The app shows you:
 
 # To do list
 
-- Remove unused react testing library and replace it by jest.
 - Add a unique loader state and present all data when ready.
 - Add a filter by element type.
 - Implement the new [Pokemon Client](https://github.com/PokeAPI/pokeapi-js-wrapper).
