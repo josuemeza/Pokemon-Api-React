@@ -2,7 +2,7 @@ import React from "react";
 import useRequest from "../Utilities/useRequest";
 import "./Modal/ModalComponent";
 
-export const Pokemon = ({ pokemon, setShowModal }) => {
+export const Pokemon = ({ pokemon, setShowModal }: any) => {
   const { name } = pokemon;
   const { data, error } = useRequest("pokemon", name);
   if (error) return <h1>something went wrong!</h1>;

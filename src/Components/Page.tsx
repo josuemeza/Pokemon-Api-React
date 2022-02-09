@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useSWR from "swr";
 import { Pokemon } from "./pokemon";
 
-export function Page({ index, setIsEnd, searchName, setModalProfile }) {
+export function Page({ index, setIsEnd, searchName, setModalProfile }: any) {
   const { data, error } = useSWR(
     `https://pokeapi.co/api/v2/pokemon/?offset=${index * 100}&limit=100`
   );
@@ -22,7 +22,7 @@ export function Page({ index, setIsEnd, searchName, setModalProfile }) {
   if (error) return <h1> Something went wrong!</h1>;
   if (!data) return <h1>loading...</h1>;
 
-  const tempResults = data.results.map((res) => {
+  const tempResults = data.results.map((res: any) => {
     const id = res.url.split("/")[6];
     if (id > 10090) {
       setIsEnd(true);
@@ -42,7 +42,7 @@ export function Page({ index, setIsEnd, searchName, setModalProfile }) {
     String(searchName).length < 1
       ? tempResults
       : tempResults.filter(
-          (name) =>
+          (name: any) =>
             String(name.key)
               .toLowerCase()
               .indexOf(String(searchName).toLowerCase()) !== -1

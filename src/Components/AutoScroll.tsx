@@ -1,4 +1,4 @@
-export default function ({ isEnd, setRef }) {
+export default function ({ isEnd, setRef }: any) {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "./Modal";
 import "../../index.css";
 
-export default function ({ setModal, showModal }) {
+export default function ({ setModal, showModal }: any) {
   const { show, name, pic } = showModal;
 
   function close() {

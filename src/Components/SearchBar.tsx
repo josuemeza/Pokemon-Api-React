@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function ({ searchName, setSearchName }) {
-  function handleChange(e) {
+export default function ({ searchName, setSearchName }: any) {
+  function handleChange(e: any) {
     setSearchName(e.target.value);
   }
 

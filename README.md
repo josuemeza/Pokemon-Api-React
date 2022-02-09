@@ -32,3 +32,8 @@ The app shows you:
 - Code refactor to maintain layer independence.
 - Use dependency injection to implement the new client.
 - Grow up the coverage to the higher!
+
+# Tips
+
+- Use [jest-when](https://www.npmjs.com/package/jest-when)
+- Use [jest-mock-extended](https://www.npmjs.com/package/jest-mock-extended)

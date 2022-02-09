@@ -7,6 +7,7 @@ import "./Components/AutoScroll";
 import AutoScroll from "./Components/AutoScroll";
 import "./Components/Modal/ModalComponent";
 import ModalComponent from "./Components/Modal/ModalComponent";
+
 function App() {
   const [arrayCount, setRef] = useOnScreen({ rootMargin: "10px" });
   const [searchName, setSearchName] = useState("");

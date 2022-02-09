@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useOnScreen(options) {
+export function useOnScreen(options: any) {
   const [ref, setRef] = useState(null);
   const [arrayCount, setArrayCount] = useState(0);
   useEffect(() => {
