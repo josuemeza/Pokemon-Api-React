@@ -21,7 +21,6 @@ The app shows you:
 # To do list
 
 - Add a unique loader state and present all data when ready.
-- Add a filter by element type.
 - Implement the new [Pokemon Client](https://github.com/PokeAPI/pokeapi-js-wrapper).
 - Add Pokemon description in single modal.
 
@@ -36,3 +35,7 @@ The app shows you:
 
 - Use [jest-when](https://www.npmjs.com/package/jest-when)
 - Use [jest-mock-extended](https://www.npmjs.com/package/jest-mock-extended)
+
+# What next?
+
+- Add a filter by element type.
