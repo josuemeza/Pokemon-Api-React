@@ -23,8 +23,8 @@ export const PokemonList: React.FC<PokemonListProps> = ({
       .catch(setError)
   }, [])
 
-  if (error) return <h1> Something went wrong!</h1>
-  if (!pokemonList) return <h1>loading...</h1>
+  if (error) return <h1>Something went wrong!</h1>
+  if (!pokemonList) return <h1>Loading...</h1>
 
   return (
     <header className="App-header">

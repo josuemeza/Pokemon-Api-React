@@ -3,11 +3,6 @@ module.exports = {
   transform: {
     '^.+\\.ts?$': 'ts-jest',
   },
-  transformIgnorePatterns: [
-    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.js$",
-    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.ts$",
-    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.tsx$"
-  ],
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   collectCoverageFrom: [
     "src/**/*.ts"

@@ -34,6 +34,7 @@ describe("Call to fetchAll", () => {
     const result: Pokemon[] = await client.fetchAll()
     expect(result).toEqual(expected)
   })
+  
   it("should return a list with a single pokemon when it is requested", async () => {
     const pokemonListItem = fakePokemonListItem()
     const names = [ pokemonListItem.name ]
