@@ -22,7 +22,6 @@ The app shows you:
 
 - Add a unique loader state and present all data when ready.
 - Implement the new [Pokemon Client](https://github.com/PokeAPI/pokeapi-js-wrapper).
-- Add Pokemon description in single modal.
 
 # Challenges
 
@@ -38,4 +37,5 @@ The app shows you:
 
 # What next?
 
+- Add Pokemon description in single modal.
 - Add a filter by element type.
