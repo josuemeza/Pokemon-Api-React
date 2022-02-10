@@ -1,9 +1,19 @@
-import { useState } from "react";
+import React from "react"
 
-export default function ({ searchName, setSearchName }: any) {
-  function handleChange(e: any) {
-    setSearchName(e.target.value);
-  }
-
-  return <input value={searchName} onChange={handleChange}></input>;
+interface SearchBarProps {
+  searchName: string
+  setSearchName: (value: string) => void
 }
+const SearchBar: React.FC<SearchBarProps> = ({
+  searchName,
+  setSearchName
+}) => (
+  <input
+    value={searchName}
+    onChange={(e: any) => {
+      setSearchName(e.target.value)
+    }}
+  />
+)
+
+export default SearchBar

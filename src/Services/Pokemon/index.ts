@@ -5,3 +5,4 @@ export interface PokemonClient {
 }
 
 export { PokemonRestApi, ENDPOINT_URL } from "./PokemonRestApi"
+export { PokemonCli } from "./PokemonCLI"

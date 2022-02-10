@@ -11,7 +11,7 @@ export class PokemonRestApi implements PokemonClient {
         const result = await axios.get(pokemon.url)
         const { name, sprites } = result.data
         const data = {
-          name: name,
+          name,
           sprite: sprites["front_default"],
           pic: sprites["other"]["official-artwork"]["front_default"]
         }

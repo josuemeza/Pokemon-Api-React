@@ -2,7 +2,7 @@ import { when } from "jest-when"
 import axios from "axios"
 import Pokemon from "../../Model/Pokemon"
 import { PokemonRestApi, ENDPOINT_URL } from "../../Services/Pokemon"
-import { services } from "../../__mocks__/Services/PokemonRestApi.mock"
+import { fakePokemonListItem, fakePokemonSingle } from "../../__fixtures__/pokemon-js-wrapper.fixtures"
 
 jest.mock("axios")
 
@@ -12,24 +12,34 @@ beforeEach(() => {
 
 describe("Call to fetchAll", () => {
   it("should return a list of pokemon", async () => {
-    const mockList = services.responses.list()
-    const mockSingle = services.responses.single()
-    const expected: Pokemon[] = [{
-      name: mockSingle.data.name,
-      sprite: mockSingle.data.sprites["front_default"],
-      pic: mockSingle.data.sprites["other"]["official-artwork"]["front_default"]
-    }]
+    const listAmount = 5
+    const url = "https://sample.pokemon"
+    const pokemonListData = Array(listAmount).fill(fakePokemonListItem({ url }))
+    const pokemonSingle = fakePokemonSingle()
+    const { name, sprites } = pokemonSingle
+
+    const expected: Pokemon[] = Array(listAmount).fill({
+      name,
+      sprite: sprites["front_default"],
+      pic: sprites["other"]["official-artwork"]["front_default"]
+    })
 
     when(axios.get)
       .calledWith(ENDPOINT_URL)
-      .mockReturnValue(new Promise(res => res(mockList)))
+      .mockReturnValue(new Promise(res => res({
+        "data": {
+          "results": pokemonListData
+        }
+      })))
     
     when(axios.get)
-      .calledWith("https://sample.pokemon")
-      .mockReturnValue(new Promise(res => res(mockSingle)))
+      .calledWith(url)
+      .mockReturnValue(new Promise(res => res({
+        "data": pokemonSingle
+      })))
 
-    const restClient = new PokemonRestApi()
-    const result: Pokemon[] = await restClient.fetchAll()
+    const client = new PokemonRestApi()
+    const result: Pokemon[] = await client.fetchAll()
     expect(result).toEqual(expected)
   })
 })
