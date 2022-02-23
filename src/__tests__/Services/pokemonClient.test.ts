@@ -1,3 +1,4 @@
+import Pokemon from '../../Model/Pokemon';
 import {
   PokemonClient,
   PokemonRestApiClient,
@@ -8,7 +9,7 @@ import {
 // TODO: implementar fetchAll al cliente
 it('should load data of all pokemons', async () => {
   let result = [];
-  const expected = [];
+  const expected: Pokemon[] = [];
 
   const client: PokemonClient = new PokemonRestApiClient();
 
